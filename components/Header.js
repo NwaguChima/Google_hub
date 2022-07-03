@@ -1,4 +1,5 @@
 import React from "react";
+import User from "./User";
 
 const Header = () => {
   return (
@@ -10,6 +11,7 @@ const Header = () => {
       <div>
         <p>Gmail</p>
         <p>Images</p>
+        <User />
       </div>
     </header>
   );
