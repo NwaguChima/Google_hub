@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
 import { MicrophoneIcon, SearchIcon } from "@heroicons/react/solid";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -22,7 +23,6 @@ export default function Home() {
           width={300}
           height={100}
           alt="Google Hub Logo"
-          objectFit="cover"
         />
         <div className="flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full  items-center sm:max-w-xl lg:max-w-2xl">
           <SearchIcon className="h-5 text-gray-500 mr-3" />
@@ -36,6 +36,7 @@ export default function Home() {
       </form>
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 }
