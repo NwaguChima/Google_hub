@@ -29,8 +29,10 @@ export default function Home() {
           <input type="text" className="flex-grow  focus:outline-none" />
           <MicrophoneIcon className="h-5" />
         </div>
-        <button>Google Search</button>
-        <button>I&apos;m Feeling Lucky</button>
+        <div className="flex flex-col sm:flex-row w-1/2 space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
+          <button className="btn">Google Search</button>
+          <button className="btn">I&apos;m Feeling Lucky</button>
+        </div>
       </form>
 
       {/* Footer */}
