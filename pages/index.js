@@ -16,16 +16,17 @@ export default function Home() {
       <Header />
 
       {/* Body */}
-      <form>
+      <form className="flex flex-col items-center mt-40 ">
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Google_Name.svg"
           width={300}
           height={100}
           alt="Google Hub Logo"
+          objectFit="cover"
         />
-        <div className="">
-          <SearchIcon className="h-5" />
-          <input type="text" />
+        <div className="flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full  items-center sm:max-w-xl lg:max-w-2xl">
+          <SearchIcon className="h-5 text-gray-500 mr-3" />
+          <input type="text" className="flex-grow  focus:outline-none" />
           <MicrophoneIcon className="h-5" />
         </div>
         <button>Google Search</button>
