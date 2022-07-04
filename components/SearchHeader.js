@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { useRouter } from "next/router";
+import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
+import User from "./User";
 
 const SearchHeader = () => {
   const router = useRouter();
@@ -25,7 +27,11 @@ const SearchHeader = () => {
             ref={searchInputRef}
             className=""
           />
+          <XIcon className="h-7" />
+          <MicrophoneIcon className="h-6" />
+          <SearchIcon className="h-6" />
         </form>
+        <User />
       </div>
     </header>
   );
