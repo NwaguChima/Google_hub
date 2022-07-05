@@ -2,7 +2,15 @@ import React from "react";
 import { useRouter } from "next/router";
 
 const SearchHeaderOption = ({ title, Icon, selected }) => {
-  function handleSelectTab(title) {}
+  const router = useRouter();
+
+  function handleSelectTab(title) {
+    router.push(
+      `/search?term=${router.query.term}&searchType=${
+        title === "Images" ? "image" : ""
+      }`
+    );
+  }
 
   return (
     <div
