@@ -9,17 +9,21 @@ const SearchResults = ({ results }) => {
         {results.searchInformation.formattedSearchTime} seconds)
       </p>
       {results.items.map((result) => (
-        <div
-          key={result.link}
-          className="flex flex-col items-center justify-center"
-        >
-          <div>
-            <a href={result.link}>{result.formattedUrl}</a>
-            <a href={result.link}>
-              <h2>{result.title}</h2>
+        <div key={result.link} className="max-w-xl mb-8">
+          <div className="group">
+            <a className="text-sm truncate" href={result.link}>
+              {result.formattedUrl}
+            </a>
+            <a
+              className="group-hover:underline decoration-blue-800"
+              href={result.link}
+            >
+              <h2 className="truncate text-xl font-medium text-blue-800">
+                {result.title}
+              </h2>
             </a>
           </div>
-          <p>{Parser(result.htmlSnippet)}</p>
+          <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
         </div>
       ))}
     </div>
