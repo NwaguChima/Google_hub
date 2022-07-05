@@ -1,4 +1,5 @@
 import React from "react";
+import Parser from "html-react-parser";
 
 const SearchResults = ({ results }) => {
   return (
@@ -7,6 +8,20 @@ const SearchResults = ({ results }) => {
         About {results.searchInformation.formattedTotalResults} results (
         {results.searchInformation.formattedSearchTime} seconds)
       </p>
+      {results.items.map((result) => (
+        <div
+          key={result.link}
+          className="flex flex-col items-center justify-center"
+        >
+          <div>
+            <a href={result.link}>{result.formattedUrl}</a>
+            <a href={result.link}>
+              <h2>{result.title}</h2>
+            </a>
+          </div>
+          <p>{Parser(result.htmlSnippet)}</p>
+        </div>
+      ))}
     </div>
   );
 };
