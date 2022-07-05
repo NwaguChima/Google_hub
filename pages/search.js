@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import SearchHeader from "../components/SearchHeader";
+import SearchResults from "../components/SearchResults";
 import Response from "../Response";
 
 const search = ({ results }) => {
@@ -15,6 +16,7 @@ const search = ({ results }) => {
       <SearchHeader />
 
       {/* Search Result */}
+      <SearchResults />
     </div>
   );
 };
